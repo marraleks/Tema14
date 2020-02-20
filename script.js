@@ -12,12 +12,13 @@ bilde1.onclick = () => {
     
     door.onclick = () => {
         profiler.style.display = "flex"
-        chatContainer.classList.toggle("visible")
+        chatContainer.style.display = "block"
             yes.onclick = () => {
                 bakgrunn1.classList.toggle("visible")
+                chatContainer.style.display = "none"
             }
             no.onclick = () => {
-                chatContainer.classList.toggle("visible")
+                chatContainer.style.display = "none"
             }
     }
 }
