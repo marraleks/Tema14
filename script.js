@@ -1,3 +1,4 @@
+const bilde = document.querySelectorAll(".bilde");
 const bilde1 = document.querySelector(".bilde1");
 const bilde2 = document.querySelector(".bilde2");
 const bilde3 = document.querySelector(".bilde3");
@@ -82,12 +83,18 @@ bilde5.onclick = () => {
 
 function choose() {
     if (
-    bilde1.classList.contains('unclickable')
+    bilde.classList.contains('unclickable')
     && bilde2.classList.contains('unclickable')
     && bilde3.classList.contains('unclickable')
     && bilde4.classList.contains('unclickable')
-    && bilde5.classList.contains('unclickable') ) {
+    && bilde5.classList.contains('unclickable')
+     ) {
         // console.log("test")
         topText.innerHTML='Velg'
+        bilde.classList.remove('unclickable')
+        // bilde2.classList.remove('unclickable')
+        // bilde3.classList.remove('unclickable')
+        // bilde4.classList.remove('unclickable')
+        // bilde5.classList.remove('unclickable')
     }
 }
