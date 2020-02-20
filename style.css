@@ -25,9 +25,18 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* max-width: 80vw; */
 }
 
 .bilde{
     height: 70vh;
     margin: 2rem;
+}
+
+.unclickable {
+    opacity: 10%;
+}
+
+.select {
+    display: none;
 }
