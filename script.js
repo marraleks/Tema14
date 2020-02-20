@@ -9,16 +9,26 @@ const bakgrunn1 = document.querySelector(".bakgrunn1");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 
+const chatContainer = document.querySelector(".chat-container");
+const yes = document.querySelector(".yes");
+const no = document.querySelector(".no");
 
 bilde1.onclick = () => {
-    bakgrunn1.classList.toggle("visible")
     profiler.style.display = "none"
+    bakgrunn1.classList.toggle("visible")
     
     door.onclick = () => {
-        bakgrunn1.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde1.classList.add("unclickable")
-        select()
+        chatContainer.style.display = "block"
+            yes.onclick = () => {
+                bakgrunn1.classList.toggle("visible")
+                chatContainer.style.display = "none"
+            }
+            no.onclick = () => {
+                chatContainer.style.display = "none"
+            }
+        choose()
     }
 }
 
@@ -30,7 +40,7 @@ bilde2.onclick = () => {
         bakgrunn1.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde2.classList.add("unclickable")
-        select()
+        choose()
     }
 }
 
@@ -42,7 +52,7 @@ bilde3.onclick = () => {
         bakgrunn1.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde3.classList.add("unclickable")
-        select()
+        choose()
     }
 }
 
@@ -54,7 +64,7 @@ bilde4.onclick = () => {
         bakgrunn1.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde4.classList.add("unclickable")
-        select()
+        choose()
     }
 }
 
@@ -66,11 +76,11 @@ bilde5.onclick = () => {
         bakgrunn1.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde5.classList.add("unclickable")
-        select()
+        choose()
     }
 }
 
-function select() {
+function choose() {
     if (
     bilde1.classList.contains('unclickable')
     && bilde2.classList.contains('unclickable')
