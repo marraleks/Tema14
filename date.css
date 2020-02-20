@@ -66,3 +66,15 @@ font-family: Arial, Helvetica, sans-serif;
     right: 15%;
     bottom: 15%;
 }
+.ending1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("img/Outcome_gift.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}

@@ -9,10 +9,13 @@ const select = document.querySelector('.select')
 const bakgrunn1 = document.querySelector(".bakgrunn1");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
+const ending1 = document.querySelector(".ending1");
+
 
 const chatContainer = document.querySelector(".chat-container");
 const yes = document.querySelector(".yes");
 const no = document.querySelector(".no");
+
 
 bilde1.onclick = () => {
     profiler.style.display = "none"
@@ -82,19 +85,27 @@ bilde5.onclick = () => {
 }
 
 function choose() {
+    
     if (
-    bilde.classList.contains('unclickable')
+    bilde1.classList.contains('unclickable')
     && bilde2.classList.contains('unclickable')
     && bilde3.classList.contains('unclickable')
     && bilde4.classList.contains('unclickable')
     && bilde5.classList.contains('unclickable')
      ) {
-        // console.log("test")
         topText.innerHTML='Velg'
-        bilde.classList.remove('unclickable')
-        // bilde2.classList.remove('unclickable')
-        // bilde3.classList.remove('unclickable')
-        // bilde4.classList.remove('unclickable')
-        // bilde5.classList.remove('unclickable')
+        bilde1.classList.remove('unclickable')
+        bilde2.classList.remove('unclickable')
+        bilde3.classList.remove('unclickable')
+        bilde4.classList.remove('unclickable')
+        bilde5.classList.remove('unclickable')
+    }
+    velgDate()
+}
+function velgDate() {
+    if(topText.innerHTML.includes("Velg")){
+        console.log("test")
+    } else{
+        console.log("idiot")
     }
 }
