@@ -7,9 +7,11 @@ const bilde5 = document.querySelector(".bilde5");
 const topText = document.querySelector('.topText')
 const select = document.querySelector('.select')
 const bakgrunn1 = document.querySelector(".bakgrunn1");
+const bakgrunn3 = document.querySelector(".bakgrunn3");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 const ending1 = document.querySelector(".ending1");
+const ending3 = document.querySelector(".ending3");
 
 
 const chatContainer = document.querySelector(".chat-container");
@@ -49,11 +51,11 @@ bilde2.onclick = () => {
 }
 
 bilde3.onclick = () => {
-    bakgrunn1.classList.toggle("visible")
+    bakgrunn3.classList.toggle("visible")
     profiler.style.display = "none"
     
-    door.onclick = () => {
-        bakgrunn1.classList.toggle("visible")
+    bakgrunn3.onclick = () => {
+        bakgrunn3.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde3.classList.add("unclickable")
         choose()
@@ -107,6 +109,11 @@ function velgDate() {
         bilde1.onclick = () => {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
+            profiler.style.display = "none"
+        }
+        bilde3.onclick = () => {
+            ending3.style.display = "block"
+            bakgrunn3.style.display = "none"
             profiler.style.display = "none"
         }
     }

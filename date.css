@@ -8,17 +8,19 @@ box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
 }
 
-.bakgrunn1{
+.bakgrunn{
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url("img/Gift/Defaultimage.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: none;
+}
+.bakgrunn1{
+    background-image: url("img/Gift/Defaultimage.png");
 }
 .bakgrunn1.visible{
     display: block;
@@ -66,15 +68,27 @@ font-family: Arial, Helvetica, sans-serif;
     right: 15%;
     bottom: 15%;
 }
-.ending1{
+.ending{
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url("img/Gift/Outcome_gift.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: none;
+}
+.ending1{
+    background-image: url("img/Gift/Outcome_gift.jpg");
+}
+
+.bakgrunn3{
+    background-image: url("img/Paradise/Kaffe.png");
+}
+.bakgrunn3.visible{
+    display: block;
+}
+.ending3{
+    background-image: url("img/Paradise/Utfall.png");
 }
