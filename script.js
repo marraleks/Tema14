@@ -104,8 +104,10 @@ function choose() {
 }
 function velgDate() {
     if(topText.innerHTML.includes("Velg")){
-        console.log("test")
-    } else{
-        console.log("idiot")
+        bilde1.onclick = () => {
+            ending1.style.display = "block"
+            bakgrunn1.style.display = "none"
+            profiler.style.display = "none"
+        }
     }
 }
