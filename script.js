@@ -1,3 +1,5 @@
+const endings = document.querySelectorAll(".ending");
+
 const bilde = document.querySelectorAll(".bilde");
 const bilde1 = document.querySelector(".bilde1");
 const bilde2 = document.querySelector(".bilde2");
@@ -12,7 +14,7 @@ const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 const ending1 = document.querySelector(".ending1");
 const ending3 = document.querySelector(".ending3");
-
+const close = document.querySelector(".close");
 
 const chatContainer = document.querySelector(".chat-container");
 const yes = document.querySelector(".yes");
@@ -86,8 +88,7 @@ bilde5.onclick = () => {
     }
 }
 
-function choose() {
-    
+function choose() {  
     if (
     bilde1.classList.contains('unclickable')
     && bilde2.classList.contains('unclickable')
@@ -110,11 +111,21 @@ function velgDate() {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
             profiler.style.display = "none"
+            close.style.display = "block"
         }
         bilde3.onclick = () => {
             ending3.style.display = "block"
             bakgrunn3.style.display = "none"
             profiler.style.display = "none"
+            close.style.display = "block"
         }
     }
 }
+
+
+    close.onclick = () => {
+        profiler.style.display = "flex"
+        ending3.style.display = "none"
+        close.style.display = "none"
+        topText.textContent = "Dating i 2020"
+    }
