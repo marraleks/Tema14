@@ -1,5 +1,4 @@
 const endings = document.querySelectorAll(".ending");
-
 const bilde = document.querySelectorAll(".bilde");
 const bilde1 = document.querySelector(".bilde1");
 const bilde2 = document.querySelector(".bilde2");
@@ -20,16 +19,19 @@ const chatContainer = document.querySelector(".chat-container");
 const yes = document.querySelector(".yes");
 const no = document.querySelector(".no");
 
+topText.innerHTML = "Dating i 2020"
+
+if(topText.innerHTML === "Dating i 2020") {
 
 bilde1.onclick = () => {
     profiler.style.display = "none"
     bakgrunn1.classList.toggle("visible")
     
     door.onclick = () => {
-        profiler.style.display = "flex"
         bilde1.classList.add("unclickable")
         chatContainer.style.display = "block"
-            yes.onclick = () => {
+        yes.onclick = () => {
+                profiler.style.display = "flex"
                 bakgrunn1.classList.toggle("visible")
                 chatContainer.style.display = "none"
             }
@@ -87,6 +89,7 @@ bilde5.onclick = () => {
         choose()
     }
 }
+}
 
 function choose() {  
     if (
@@ -97,20 +100,21 @@ function choose() {
     && bilde5.classList.contains('unclickable')
      ) {
         topText.innerHTML='Velg'
-        bilde1.classList.remove('unclickable')
-        bilde2.classList.remove('unclickable')
-        bilde3.classList.remove('unclickable')
-        bilde4.classList.remove('unclickable')
-        bilde5.classList.remove('unclickable')
+        bilde1.classList.toggle('unclickable')
+        bilde2.classList.toggle('unclickable')
+        bilde3.classList.toggle('unclickable')
+        bilde4.classList.toggle('unclickable')
+        bilde5.classList.toggle('unclickable')
     }
     velgDate()
 }
 function velgDate() {
-    if(topText.innerHTML.includes("Velg")){
+    if(topText.innerHTML === "Velg"){
         bilde1.onclick = () => {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
             profiler.style.display = "none"
+            close.style.display = "block"
             close.style.display = "block"
         }
         bilde3.onclick = () => {
@@ -118,14 +122,16 @@ function velgDate() {
             bakgrunn3.style.display = "none"
             profiler.style.display = "none"
             close.style.display = "block"
+            close.style.display = "block"
         }
     }
 }
 
-
     close.onclick = () => {
         profiler.style.display = "flex"
-        ending3.style.display = "none"
         close.style.display = "none"
         topText.textContent = "Dating i 2020"
+        for(i = 0; i < endings.length; i++) {
+            endings[i].style.display = "none";   
+        }
     }
