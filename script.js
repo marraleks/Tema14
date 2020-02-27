@@ -10,18 +10,25 @@ const select = document.querySelector('.select')
 const bakgrunn1 = document.querySelector(".bakgrunn1");
 const bakgrunn2 = document.querySelector(".bakgrunn2");
 const bakgrunn3 = document.querySelector(".bakgrunn3");
+const bakgrunn4 = document.querySelector(".bakgrunn4");
 const bakgrunn5 = document.querySelector(".bakgrunn5");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 const ending1 = document.querySelector(".ending1");
 const ending2 = document.querySelector(".ending2");
 const ending3 = document.querySelector(".ending3");
+const ending4 = document.querySelector(".ending4");
 const ending5 = document.querySelector(".ending5");
 const close = document.querySelector(".close");
+const mcDoor = document.querySelector('.mcDoor')
 
 const chatContainer = document.querySelector(".chat-container");
 const yes = document.querySelector(".yes");
 const no = document.querySelector(".no");
+
+const chatContainer4 = document.querySelector(".chat-container4");
+const yes4 = document.querySelector(".yes4");
+const no4 = document.querySelector(".no4");
 
 const kommentar = document.querySelectorAll('.kommentar')
 const ting = document.querySelectorAll('.ting')
@@ -78,17 +85,32 @@ bilde3.onclick = () => {
     }
 }
 
+
 bilde4.onclick = () => {
-    bakgrunn1.classList.toggle("visible")
+    bakgrunn4.classList.toggle("visible")
     profiler.style.display = "none"
     
-    door.onclick = () => {
-        bakgrunn1.classList.toggle("visible")
-        profiler.style.display = "flex"
+    mcDoor.onclick = () => {
         bilde4.classList.add("unclickable")
+        if(chatContainer4.style.display != "block"){
+            closeComments()
+            chatContainer4.style.display = "block"
+        }else{
+            closeComments()
+        }
+        yes4.onclick = () => {
+                bakgrunn4.classList.toggle("visible")
+                chatContainer4.style.display = "none"
+                profiler.style.display = "flex"
+
+            }
+            no4.onclick = () => {
+                chatContainer4.style.display = "none"
+            }
         choose()
     }
 }
+
 
 bilde5.onclick = () => {
     bakgrunn5.classList.toggle("visible")
@@ -139,6 +161,12 @@ function velgDate() {
             profiler.style.display = 'none'
             close.style.display = "block"
         }
+        bilde4.onclick = () => {
+            ending4.style.display = "block"
+            bakgrunn4.style.display = "none"
+            profiler.style.display = 'none'
+            close.style.display = "block"
+        }
         bilde5.onclick = () => {
             ending5.style.display = "block"
             bakgrunn5.style.display = "none"
@@ -169,4 +197,8 @@ const closeComments = () => {
     for(let i = 0; i < ting.length; i++) {
         kommentar[i].style.display = "none"
     }
+}
+
+mcDoor.onclick = () => {
+    console.log('mchadebra')
 }
