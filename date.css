@@ -83,6 +83,14 @@ font-family: Arial, Helvetica, sans-serif;
     display: block;
 }
 
+.bakgrunn6{
+    background-image: url("img/Profil6/bakgrunn6.png");
+    background-size: contain;
+}
+.bakgrunn6.visible{
+    display: block;
+}
+
 .door {
     position: absolute;
     right: 9.4rem;

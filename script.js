@@ -5,6 +5,7 @@ const bilde2 = document.querySelector(".bilde2");
 const bilde3 = document.querySelector(".bilde3");
 const bilde4 = document.querySelector(".bilde4");
 const bilde5 = document.querySelector(".bilde5");
+const bilde6 = document.querySelector(".bilde6");
 const topText = document.querySelector('.topText')
 const select = document.querySelector('.select')
 const bakgrunn1 = document.querySelector(".bakgrunn1");
@@ -12,6 +13,7 @@ const bakgrunn2 = document.querySelector(".bakgrunn2");
 const bakgrunn3 = document.querySelector(".bakgrunn3");
 const bakgrunn4 = document.querySelector(".bakgrunn4");
 const bakgrunn5 = document.querySelector(".bakgrunn5");
+const bakgrunn6 = document.querySelector(".bakgrunn6");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 const ending1 = document.querySelector(".ending1");
@@ -124,6 +126,18 @@ bilde5.onclick = () => {
     }
 }
 
+bilde6.onclick = () => {
+    bakgrunn6.classList.toggle("visible")
+    profiler.style.display = "none"
+    
+    bakgrunn6.onclick = () => {
+        bakgrunn6.classList.toggle("visible")
+        profiler.style.display = "flex"
+        bilde6.classList.add("unclickable")
+        choose()
+    }
+}
+
 function choose() {  
     if (
     bilde1.classList.contains('unclickable')
@@ -131,6 +145,7 @@ function choose() {
     && bilde3.classList.contains('unclickable')
     && bilde4.classList.contains('unclickable')
     && bilde5.classList.contains('unclickable')
+    && bilde6.classList.contains('unclickable')
      ) {
         topText.innerHTML='Hvem går du for?'
         bilde1.classList.toggle('unclickable')
@@ -138,6 +153,7 @@ function choose() {
         bilde3.classList.toggle('unclickable')
         bilde4.classList.toggle('unclickable')
         bilde5.classList.toggle('unclickable')
+        bilde6.classList.toggle('unclickable')
     }
     velgDate()
 }
@@ -197,8 +213,4 @@ const closeComments = () => {
     for(let i = 0; i < ting.length; i++) {
         kommentar[i].style.display = "none"
     }
-}
-
-mcDoor.onclick = () => {
-    console.log('mchadebra')
 }
