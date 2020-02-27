@@ -8,11 +8,13 @@ const bilde5 = document.querySelector(".bilde5");
 const topText = document.querySelector('.topText')
 const select = document.querySelector('.select')
 const bakgrunn1 = document.querySelector(".bakgrunn1");
+const bakgrunn2 = document.querySelector(".bakgrunn2");
 const bakgrunn3 = document.querySelector(".bakgrunn3");
 const bakgrunn5 = document.querySelector(".bakgrunn5");
 const door = document.querySelector(".door");
 const profiler = document.querySelector(".profiler");
 const ending1 = document.querySelector(".ending1");
+const ending2 = document.querySelector(".ending2");
 const ending3 = document.querySelector(".ending3");
 const ending5 = document.querySelector(".ending5");
 const close = document.querySelector(".close");
@@ -53,11 +55,11 @@ bilde1.onclick = () => {
 }
 
 bilde2.onclick = () => {
-    bakgrunn1.classList.toggle("visible")
+    bakgrunn2.classList.toggle("visible")
     profiler.style.display = "none"
     
-    door.onclick = () => {
-        bakgrunn1.classList.toggle("visible")
+    bakgrunn2.onclick = () => {
+        bakgrunn2.classList.toggle("visible")
         profiler.style.display = "flex"
         bilde2.classList.add("unclickable")
         choose()
@@ -122,6 +124,12 @@ function velgDate() {
         bilde1.onclick = () => {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
+            profiler.style.display = 'none'
+            close.style.display = "block"
+        }
+        bilde2.onclick = () => {
+            ending2.style.display = "block"
+            bakgrunn2.style.display = "none"
             profiler.style.display = 'none'
             close.style.display = "block"
         }

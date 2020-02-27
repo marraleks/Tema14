@@ -52,6 +52,12 @@ font-family: Arial, Helvetica, sans-serif;
 .bakgrunn1.visible{
     display: block;
 }
+.bakgrunn2{
+    background-image: url("img/Pappagutt/Date.jpg");
+}
+.bakgrunn2.visible{
+    display: block;
+}
 .bakgrunn3{
     background-image: url("img/Paradise/Kaffe.png");
 }
@@ -153,11 +159,13 @@ font-family: Arial, Helvetica, sans-serif;
 .ending1{
     background-image: url("img/Gift/Outcome_gift.PNG");
 }
+.ending2{
+    background-image: url("img/Pappagutt/Avsluttnings_Bilde.jpg");
+}
 
 .ending3{
     background-image: url("img/Paradise/Utfall.png");
 }
 .ending5{
     background-image: url("img/Gimp/Fishgimp.png");
-    background-size: contain;
 }
