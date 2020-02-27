@@ -132,7 +132,7 @@ function choose() {
     && bilde4.classList.contains('unclickable')
     && bilde5.classList.contains('unclickable')
      ) {
-        topText.innerHTML='Velg'
+        topText.innerHTML='Hvem går du for?'
         bilde1.classList.toggle('unclickable')
         bilde2.classList.toggle('unclickable')
         bilde3.classList.toggle('unclickable')
@@ -142,7 +142,7 @@ function choose() {
     velgDate()
 }
 function velgDate() {
-    if(topText.innerHTML === "Velg"){
+    if(topText.innerHTML === "Hvem går du for?"){
         bilde1.onclick = () => {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
