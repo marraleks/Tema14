@@ -24,14 +24,14 @@ topText.innerHTML = "Dating i 2020"
 if(topText.innerHTML === "Dating i 2020") {
 
 bilde1.onclick = () => {
-    profiler.style.display = "none"
     bakgrunn1.classList.toggle("visible")
+    profiler.style.display = "none"
     
     door.onclick = () => {
         bilde1.classList.add("unclickable")
         chatContainer.style.display = "block"
+        profiler.style.display = "flex"
         yes.onclick = () => {
-                profiler.style.display = "flex"
                 bakgrunn1.classList.toggle("visible")
                 chatContainer.style.display = "none"
             }
@@ -113,25 +113,18 @@ function velgDate() {
         bilde1.onclick = () => {
             ending1.style.display = "block"
             bakgrunn1.style.display = "none"
-            profiler.style.display = "none"
-            close.style.display = "block"
+            profiler.style.display = 'none'
             close.style.display = "block"
         }
         bilde3.onclick = () => {
             ending3.style.display = "block"
             bakgrunn3.style.display = "none"
-            profiler.style.display = "none"
-            close.style.display = "block"
+            profiler.style.display = 'none'
             close.style.display = "block"
         }
     }
 }
 
-    close.onclick = () => {
-        profiler.style.display = "flex"
-        close.style.display = "none"
-        topText.textContent = "Dating i 2020"
-        for(i = 0; i < endings.length; i++) {
-            endings[i].style.display = "none";   
-        }
-    }
+close.onclick = () => {
+    location.reload()
+}
