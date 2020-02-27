@@ -19,9 +19,7 @@ const chatContainer = document.querySelector(".chat-container");
 const yes = document.querySelector(".yes");
 const no = document.querySelector(".no");
 
-topText.innerHTML = "Dating i 2020"
-
-if(topText.innerHTML === "Dating i 2020") {
+topText.innerHTML = "Velg din date"
 
 bilde1.onclick = () => {
     bakgrunn1.classList.toggle("visible")
@@ -88,7 +86,6 @@ bilde5.onclick = () => {
         bilde5.classList.add("unclickable")
         choose()
     }
-}
 }
 
 function choose() {  
