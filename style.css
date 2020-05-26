@@ -32,11 +32,12 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
 }
 
 .bilde{
     height: 70vh;
-    margin: 4rem;
+    margin: 1rem 4rem;
     border: 1px solid black;
     cursor: pointer;
 }
