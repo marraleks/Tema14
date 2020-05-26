@@ -38,6 +38,7 @@ h1{
     height: 70vh;
     margin: 4rem;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .unclickable {
